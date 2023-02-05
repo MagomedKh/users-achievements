@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchUsers } from "../api/fake.api/users.api";
+import { fetchUsers } from "../fake.api/users.api";
 
 const initialState = {
    entities: null,
