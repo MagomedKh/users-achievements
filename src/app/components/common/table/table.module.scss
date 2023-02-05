@@ -1,0 +1,68 @@
+@import "../../../styles/mixins.scss";
+@import "../../../styles/variables.scss";
+
+.wrapper {
+   padding: 0;
+}
+
+.table {
+   width: 100%;
+   padding: 20px;
+   border-collapse: collapse;
+   text-align: center;
+   @include mobile {
+      border-spacing: 1px;
+   }
+}
+
+.tableHeader {
+   font-size: 25px;
+
+   @include mobile {
+      font-size: 13px;
+   }
+}
+
+.tableBody {
+   font-size: 18px;
+   @include mobile {
+      font-size: 14px;
+   }
+}
+
+.tr {
+   border-bottom: $border;
+}
+
+.td {
+   padding: 25px;
+   @include mobile {
+      padding: 10px 0;
+      position: relative;
+      right: 20px;
+   }
+}
+
+.th:not(:first-child) {
+   padding: 25px;
+   @include mobile {
+      padding: 5px;
+   }
+   & > span {
+      cursor: pointer;
+      &:hover {
+         color: rgb(136, 114, 114);
+      }
+   }
+}
+
+.thSpan {
+   padding: 10px 20px;
+   margin: -10px -20px;
+   @include mobile {
+      position: relative;
+      right: 10px;
+      padding: 3px 6px;
+      margin: -3px -6px;
+   }
+}

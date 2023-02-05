@@ -1,0 +1,45 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles//mixins.scss";
+
+.list {
+   list-style: none;
+   margin-bottom: 10px;
+   padding: 0;
+   border: $border;
+   border-radius: 7px;
+   @include tablet {
+      margin-right: 20px;
+   }
+   @include mobile {
+      margin-right: 10px;
+   }
+}
+.listItem {
+   padding: 12px;
+   cursor: pointer;
+   min-width: 210px;
+   @include mobile {
+      min-width: 45vw;
+   }
+   &:not(:last-child) {
+      border-bottom: $border;
+   }
+   &:first-child {
+      border-top-left-radius: 7px;
+      border-top-right-radius: 7px;
+   }
+   &:last-child {
+      border-end-start-radius: 7px;
+      border-end-end-radius: 7px;
+   }
+   &:hover {
+      background-color: rgb(243, 242, 242);
+   }
+}
+
+.title {
+   margin-bottom: 7px;
+   @include mobile {
+      font-size: 16px;
+   }
+}
